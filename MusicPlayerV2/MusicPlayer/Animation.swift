@@ -101,15 +101,7 @@ struct DancingDotsView: View {
             .frame(minHeight: 500)
             .drawingGroup()
             Spacer()
-            PlayResetButton(animating: $isAnimating) {
-                withAnimation(.spring(response: 0.6, dampingFraction: 0.5, blendDuration: 1).repeatForever()) {
-                    if isAnimating {
-                        tracker.randomizePositions()
-                    } else {
-                        tracker.resetPositions()
-                    }
-                }
-            }
+
         }
         .navigationTitle("Dancing Dots")
         .navigationBarTitleDisplayMode(.inline)
