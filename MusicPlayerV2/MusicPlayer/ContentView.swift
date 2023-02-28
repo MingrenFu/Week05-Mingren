@@ -91,8 +91,8 @@ struct ContentView: View {
                 Text("Home")
             }
             
-            Text("Search Screen")
-         
+//            Text("Search Screen")
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
