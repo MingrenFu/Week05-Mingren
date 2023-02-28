@@ -1,10 +1,16 @@
+//
+//  SearchView.swift
+//  MusicPlayer
+//
+//  Created by jht2 on 2/28/23.
+//
 
 import SwiftUI
 
-struct ContentView: View {
+struct SearchView: View {
     let names = ["Pop", "Film", "Electronic Music", "Jazz", "Hip Hop", "Rock"]
     @State private var searchText = ""
-
+    
     var body: some View {
         NavigationStack {
             List {
@@ -20,7 +26,7 @@ struct ContentView: View {
         }
         .searchable(text: $searchText)
     }
-
+    
     var searchResults: [String] {
         if searchText.isEmpty {
             return names
@@ -30,8 +36,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SearchView()
     }
 }
+
